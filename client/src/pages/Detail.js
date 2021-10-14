@@ -16,7 +16,12 @@ import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
 function Detail() {
-  const [state, dispatch] = useStoreContext();
+  // const [state, dispatch] = useStoreContext();
+  const dispatch= useDispatch();
+  const {products, cart} = useSelector((state) =>{
+    return state;
+  })
+
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
