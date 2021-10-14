@@ -16,7 +16,7 @@ const Cart = () => {
   // const [state, dispatch] = useStoreContext();
   const dispatch = useDispatch();
   const state = useSelector((state) => {
-    return state;
+    return state.cart;
   })
 
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
